@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+      window.nodeRequire = require;
+      delete window.require;
+      delete window.exports;
+      delete window.module;
+    </script>
   </head>
 <!--   <body>
     <h1>Hello World!</h1>
@@ -10,20 +17,30 @@
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
   </body> -->
-  <body style="
-    width: 350px;
-    height: 350px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;">
+  <body>
+    
+    <h1>Photograph</h1>
+    <h2>Meta</h2>
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <!-- front content -->
+          <img id="img-box" style="width: 350px;height: 350px;" src="./flower.jpg" alt="flower">
+        </div>
+        <div class="back">
+          <!-- back content -->
+          <p id="fileName">Name: flower.jpg</p>
+          <p id="fileType">Type: image/jpeg</p>
+          <p id="fileSize">Size: 1MB</p>
+          <p id="fileModified">Last Modified: 24/11/2016</p>
+        </div>
+      </div>
+    </div>
 
-    <p id="fileName"></p>
-    <p id="fileType"></p>
-    <p id="fileSize"></p>
-    <p id="fileCreated"></p>
-    <p id="fileModified"></p>
+<!--     <div style="width: 350px;height: 350px;padding: 10px;border: 1px solid #aaaaaa;">
+      
+    </div> -->
   </body>
-  <script>
-    // You can also require other files to run in this process
-   require('./renderer.js')
-  </script>
+  <script type="text/javascript" src="./libs/jquery-3.1.1.min.js"></script>
+  <script src="./js/renderer.js"></script>
 </html>
