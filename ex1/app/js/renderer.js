@@ -24,7 +24,7 @@ $(".front").on('drop', function (e) {
             // display the uploaded img
             $('#img-box').attr("src", file.path);
       } else {
-            // display a broken img
+            // display a broken img in the future
       }
 
       // display the img meta data
