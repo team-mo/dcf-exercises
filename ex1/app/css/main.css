@@ -4,13 +4,13 @@
 }
 
 /* flip the pane when clicked */
-.flip-container.hover .flipper {
+.flip-container.click .flipper {
       transform: rotateY(180deg);
 }
 
 .flip-container, .front, .back {
-      width: 320px;
-      height: 480px;
+      width: 48em;
+      height: 12em;
 }
 
 /* flip speed goes here */
@@ -26,6 +26,7 @@
       position: absolute;
       top: 0;
       left: 0;
+      text-align: center;
 }
 
 /* front pane, placed above back */
@@ -38,4 +39,48 @@
 /* back, initially hidden pane */
 .back {
       transform: rotateY(180deg);
+}
+
+div.da {
+      outline: 2px dashed black;
+      outline-offset: -10px;
+      height: 12em;
+      width: 48em;
+      position: relative;
+      background-color: #D0EAFF;
+      text-align: center;
+}
+
+.da-hover {
+      background-color: #ECECEC !important;
+      outline-offset: -15px !important;
+}
+
+#da-download-arrow {
+      width: 60px;
+      height: auto;
+      position: absolute;
+      top: 35%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+}
+
+div.da p{
+      margin: 0;
+      color: #0f3c4b;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+}
+
+div.title {
+      text-align: center;
+}
+
+#img-box {
+      width: 48em;
+      height: 48em;
+      object-fit: contain;
 }

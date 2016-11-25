@@ -18,14 +18,23 @@
     and Electron <script>document.write(process.versions.electron)</script>.
   </body> -->
   <body>
+    <div class="title">
+      <h1>Photograph</h1>
+      <h2>Meta</h2>
+    </div>
     
-    <h1>Photograph</h1>
-    <h2>Meta</h2>
+    <div class="da">
+      <img id="da-download-arrow" src="./img/download-arrow.png" alt="">
+      <p>Drag a file here</p>
+    </div>
+
+    <br>
+    
     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
       <div class="flipper">
         <div class="front">
           <!-- front content -->
-          <img id="img-box" style="width: 350px;height: 350px;" src="./img/flower.jpg" alt="flower">
+          <img id="img-box" src="./img/flower.jpg" alt="flower">
         </div>
         <div class="back">
           <!-- back content -->

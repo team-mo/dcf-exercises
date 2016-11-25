@@ -1,4 +1,4 @@
-$('.front').on(
+$('.da').on(
     'dragover',
     function(e) {
         e.preventDefault();
@@ -6,7 +6,7 @@ $('.front').on(
     }
 )
 
-$('.front').on(
+$('.da').on(
     'dragenter',
     function(e) {
         e.preventDefault();
@@ -14,7 +14,7 @@ $('.front').on(
     }
 )
 
-$('.front').on('drop', function (e) {
+$('.da').on('drop', function (e) {
       e.preventDefault()
       // get the img file from the drop event
       var file = e.originalEvent.dataTransfer.files[0];
@@ -38,9 +38,21 @@ $('.front').on('drop', function (e) {
 /*Add an on click event for image*/
 $('.flip-container').on('click', function (e) {
   e.preventDefault()
-  if ($(this).hasClass('hover')) { 
-      $(this).removeClass('hover')
+  if ($(this).hasClass('click')) { 
+      $(this).removeClass('click')
   } else {
-      $(this).addClass('hover')
+      $(this).addClass('click')
+  }
+})
+
+/*
+Create visual feedback on the drag and drop feature
+*/
+$('.da').on('dragenter dragleave', function (e) {
+  e.preventDefault()
+  if ($(this).hasClass('da-hover')) { 
+      $(this).removeClass('da-hover')
+  } else {
+      $(this).addClass('da-hover')
   }
 })
